@@ -281,9 +281,9 @@ project-root/
 ├─ library/
 │  ├─ jquery/
 │  ├─ bootstrap/
-│  ├─ swiper/
+│  └─ swiper/
 │
-├─ img/
+└─ img/
 ```
 
 ### 📦 사용 라이브러리
