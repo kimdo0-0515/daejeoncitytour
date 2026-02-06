@@ -3,9 +3,16 @@
 > **기존 대전시티투어 웹사이트를 사용자 중심 UI/UX와 인터랙션을 강화한 구조로 리뉴얼한 프론트엔드 프로젝트입니다.**<br>
 > 💡 본 프로젝트는 퍼블리싱 + 프론트엔드 로직 설계를 함께 수행한 개인 작업입니다.
 
-| 리뉴얼 전 | 리뉴얼 후 |
-|-----------|-----------|
-| (이미지 첨부 예정) | (이미지 첨부 예정) |
+<table>
+  <tr>
+    <th>리뉴얼 전</th>
+    <th>리뉴얼 후</th>
+  </tr>
+  <tr>
+    <th valign="top"><img src="https://github.com/user-attachments/assets/755d8f7f-5b39-4e28-8f06-ffcf692140c6" alt="리뉴얼 전"></th>
+    <th valign="top"><img src="https://github.com/user-attachments/assets/440f15a7-c919-408a-9a56-35151b2e39a2" alt="리뉴얼 후"></th>
+  </tr>
+</table>
 
 ---
 
