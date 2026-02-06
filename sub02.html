@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- favicon -->
+  <link rel="icon" href="img/daejeon_symbol.ico">
+  <title>공지사항</title>
+  <!-- library css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta3/css/bootstrap-select.min.css" integrity="sha512-g2SduJKxa4Lbn3GW+Q7rNz+pKP9AWMR++Ta8fgwsZRCUsawjPvF/BxSMkGS61VsR9yinGoEgrHPGPn2mrj8+4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- initial setting css -->
+  <link rel="stylesheet" href="css/common/font.css">
+  <link rel="stylesheet" href="css/common/variable.css">
+  <link rel="stylesheet" href="css/common/reset.css">
+  <!-- custom css -->
+  <link rel="stylesheet" href="css/common/component.css">
+  <link rel="stylesheet" href="css/common/basic-layout.css">
+  <link rel="stylesheet" href="css/sub02/style.css">
+  <link rel="stylesheet" href="css/sub02/responsive-tab.css">
+  <link rel="stylesheet" href="css/sub02/responsive-mo.css">
+
+  <!-- library js -->
+  <script src="library/jquery/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta3/js/bootstrap-select.min.js" integrity="sha512-yrOmjPdp8qH8hgLfWpSFhC/+R9Cj9USL8uJxYIveJZGAiedxyIxwNw4RsLDlcjNlIRR4kkHaDHSmNHAkxFTmgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    let selectedValue = 'allKeyword';  // 드롭다운 선택값 초기화
+
+    $(document).ready(function(){
+      $('#header').load('include/header.html');
+      $('#footer').load('include/footer.html');
+      $('#hamWrap').load('include/moMenu.html');
+
+      $('select').selectpicker();
+      $('select').on('change', function(e){
+        selectedValue = $(this).val();
+      });
+    });
+  </script>
+</head>
+<body class="body" id="sub02Body">
+  <div class="body__inner">
+
+    <!-- header include -->
+    <header class="header" id="header"></header>
+
+
+
+    <main class="main">
+      <section class="section">
+        <div class="section__inner">
+          <div class="page-title">
+            <div class="page-title__rect"></div>
+            <h2>공지사항</h2>
+          </div>
+
+          <div class="section__content">
+            <div class="content__table-wrap">
+              <div class="table-top">
+                <div class="count">총 <span id="postCount">00</span>개</div>
+                <form class="table-top__toggle">
+                  <select class="selectpicker select--medium">
+                    <option value="allKeyword">전체</option>
+                    <option value="titleKeyword">제목</option>
+                    <option value="writerKeyword">작성자</option>
+                  </select>
+                  <input type="search" id="inputSearch" class="input-field--medium" placeholder="검색어를 입력하세요.">
+                  <div class="page-button">
+                    <div class="page-button-right">
+                      <button class="btn btn--medium btn--gray" id="cancelBtn"><span>취소</span></button>
+                      <button class="btn btn--medium btn--yellow" id="toggle_searchBtn"><span>검색</span></button>
+                    </div>
+                  </div>
+                </form>
+                <div class="page-button">
+                    <div class="page-button-right">
+                      <button class="btn btn--medium btn--yellow" id="searchBtn"><span>검색</span></button>
+                      <button class="btn btn--medium btn--yellow" id="openToggleBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+              </div>
+              <table class="table table-hover table-bordered column-table--yellow">
+                <colgroup>
+                  <col class="col-1">
+                  <col class="col-7">
+                  <col class="col-2">
+                  <col class="col-2">
+                </colgroup>
+                <thead class="title--kr-s">
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">작성자</th>
+                    <th scope="col">작성일</th>
+                  </tr>
+                </thead>
+                <tbody class="body--kr-m">
+                  <!-- <tr class="fixed-post">
+                    <th scope="row"><i class="fa-solid fa-bullhorn"></i></th>
+                    <td class="post__title">글 제목</td>
+                    <td class="post__writer">김작성</td>
+                    <td class="post__date">2025-12-16</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td class="post__title">글 제목 글 제목글 제목 글 제목글 제목 글 제목글 제목 글 제목글 제목 글 제목글 제목 글 제목글 제목 글 제목글 제목 글 제목글 제목 글 제목글 제목 글 제목글 제목 글 제목</td>
+                    <td class="post__writer">김작성</td>
+                    <td class="post__date">2025-12-16</td>
+                  </tr> -->
+                </tbody>
+              </table>
+              <div class="table--mobile">
+                <!-- <div class="post--mobile fixed-post">
+                  <div class="title--kr-xs">
+                    <div class="post__num"><i class="fa-solid fa-bullhorn"></i></div>
+                    <div class="post__title">글 제목</div>
+                  </div>
+                  <div class="body--kr-s">
+                    <span class="post__writer">김작성</span>
+                    <span class="post__date">2025-12-16</span>
+                  </div>
+                </div>
+                <div class="post--mobile">
+                  <div class="title--kr-xs">
+                    <div class="post__num">5</div>
+                    <div class="post__title">글 제목 글 제목글 제목 글 제목글 제목 글 제목글 제목 글 제목글 제목 글 제목글 제목 글 제목글 제목 글 제목글 제목 글 제목글 제목 글 제목글 제목 글 제목글 제목 글 제목</div>
+                  </div>
+                  <div class="body--kr-s">
+                    <span class="post__writer">김작성</span>
+                    <span class="post__date">2025-12-16</span>
+                  </div>
+                </div> -->
+              </div>
+              <div class="table-page">
+                <i class="fa-solid fa-angle-left icon--xlarge page--disabled"></i>
+                <div class="page__num-wrap body--kr-m">
+                  <!-- <div class="page__number active">1</div>
+                  <div class="page__number">2</div>
+                  <div class="page__number">3</div> -->
+                </div>
+                <i class="fa-solid fa-angle-right icon--xlarge"></i>
+              </div>  <!-- table-page -->
+            </div>  <!-- content__table-wrap -->
+          </div>  <!-- section__content -->
+        </div>  <!-- section__inner -->
+      </section>
+    </main>
+
+
+
+    <!-- footer include -->
+    <footer class="footer" id="footer"></footer>
+  </div> <!-- body__inner -->
+
+
+
+  <!-- 태블릿 & 모바일 햄버거 메뉴 include -->
+  <div class="ham-wrap" id="hamWrap"></div>
+
+  <script src="js/sub02/object.js"></script>
+  <script src="js/sub02/script.js"></script>
+</body>
+</html>

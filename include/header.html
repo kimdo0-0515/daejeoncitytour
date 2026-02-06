@@ -1,0 +1,154 @@
+<div class="header__inner">
+  <a class="header__logo" href="../index.html">
+    <img class="logo--white" src="img/logo/DCT_logo_white.png" alt="headerLogo">
+    <img class="logo--black" src="img/logo/DCT_logo_black.png" alt="headerLogo">
+  </a>
+
+  <nav class="header-nav">
+    <ul class="gnb">
+      <li class="gnb__li" data-target="lnb1">
+        <a href="#none" class="title--kr-m">소개</a>
+      </li>
+      <li class="gnb__li" data-target="lnb2">
+        <a href="#none" class="title--kr-m">코스 안내</a>
+      </li>
+      <li class="gnb__li" data-target="lnb3">
+        <a href="#none" class="title--kr-m">예약</a>
+      </li>
+      <li class="gnb__li" data-target="lnb4">
+        <a href="#none" class="title--kr-m">커뮤니티</a>
+      </li>
+      <li class="gnb__li" data-target="lnb5">
+        <a href="#none" class="title--kr-m">대전관광안내</a>
+      </li>
+    </ul>
+
+    <div class="lnb-wrap">
+      <ul class="lnb" id="lnb1">
+        <li class="lnb__li title--kr-xs"><a href="#none">대전시티투어 소개</a></li>
+        <li class="lnb__li title--kr-xs"><a href="#none">이용 안내</a></li>
+        <li class="lnb__li title--kr-xs"><a href="#none">운영사 소개</a></li>
+      </ul>
+      <ul class="lnb" id="lnb2">
+        <li class="lnb__li title--kr-xs"><a href="#none">마실 코스</a></li>
+        <li class="lnb__li title--kr-xs"><a href="#none">특별 코스</a></li>
+        <li class="lnb__li title--kr-xs"><a href="#none">맞춤 코스</a></li>
+      </ul>
+      <ul class="lnb" id="lnb3">
+        <li class="lnb__li title--kr-xs"><a href="#none">예약 신청</a></li>
+        <li class="lnb__li title--kr-xs"><a href="#none">예약 확인</a></li>
+      </ul>
+      <ul class="lnb" id="lnb4">
+        <li class="lnb__li title--kr-xs"><a href="#none">공지사항</a></li>
+        <li class="lnb__li title--kr-xs"><a href="#none">문의게시판</a></li>
+        <li class="lnb__li title--kr-xs"><a href="#none">이용 후기</a></li>
+      </ul>
+      <ul class="lnb" id="lnb5">
+        <li class="lnb__li title--kr-xs"><a href="#none">추천 명소</a></li>
+        <li class="lnb__li title--kr-xs"><a href="#none">제휴 호텔</a></li>
+        <li class="lnb__li title--kr-xs"><a href="#none">외국어 안내</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="lang-wrap">
+    <button class="lang-btn" id="koBtn" value="ko"></button>
+    <button class="lang-btn" id="enBtn" value="en"></button>
+  </div>
+
+  <button class="ham-btn" id="hamBtn">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+</div>
+
+
+
+<script>
+  /* ========== DOM Element ========== */
+  const $header = document.querySelector('header');
+  const $mainHeader = document.querySelector('#mainBody header');
+  const $whiteLogo = document.querySelector('.logo--white');
+  const $blackLogo = document.querySelector('.logo--black');
+  const $gnb = document.querySelectorAll('.gnb__li');
+  const $lnb = document.querySelectorAll('.lnb');
+
+  // JS media query
+  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  
+
+
+  /* ========== Execute function ========== */
+  /* 스크롤 시 메인 헤더에 투명 스타일 이벤트 */
+  let isTopArea = true;
+  const HEADER_SCROLL_LIMIT = 200;  // 투명 헤더 스크롤 범위
+
+  if($mainHeader){
+    window.addEventListener('scroll', transparentHeaderScroll); 
+    transparentHeaderScroll();  // 화면 로드, 새로고침 시 초기화 실행
+
+    /* 투명 범위 내 메인 헤더에 마우스 호버 이벤트 */
+    if(canHover){
+      $mainHeader.addEventListener('mouseenter', transparentHeaderMouseEnter);
+      $mainHeader.addEventListener('mouseleave', transparentHeaderMouseLeave);
+    }
+  }
+  
+  /* gnb에 호버 시 하위 lnb 전체에 배경색 이벤트 */
+  $gnb.forEach(gnbItem => {
+    gnbItem.addEventListener('mouseenter', gnbMouseEnter);
+    gnbItem.addEventListener('mouseleave', gnbMouseLeave);
+  });
+
+  /* lnb에 호버 시 상위 gnb에 글자색 이벤트 */
+  $lnb.forEach(function(lnbList){
+    lnbList.addEventListener('mouseenter', lnbMouseEnter);
+    lnbList.addEventListener('mouseleave', lnbMouseLeave);
+  });
+
+
+
+  /* ========== Define function ========== */
+  function transparentHeaderScroll(){
+    const scrollTop = window.scrollY;
+    // console.log(scrollTop);
+
+    if(scrollTop <= HEADER_SCROLL_LIMIT){
+      isTopArea = true;
+      $mainHeader.classList.add('transparent');
+    }
+    else{ 
+      isTopArea = false; 
+      $mainHeader.classList.remove('transparent');
+    } 
+  }
+
+  function transparentHeaderMouseEnter(){
+    if(isTopArea) this.classList.remove('transparent');
+  }
+
+  function transparentHeaderMouseLeave(){
+    if(isTopArea) this.classList.add('transparent');
+  }
+
+  function gnbMouseEnter(){
+    $lnb.forEach(lnb => lnb.classList.remove('active'));
+    document.getElementById(this.dataset.target).classList.add('active');
+  }
+
+  function gnbMouseLeave(){
+    $lnb.forEach(lnb => lnb.classList.remove('active'));
+  }
+
+  function lnbMouseEnter(){
+    $gnb.forEach(gnbItem => {
+      gnbItem.classList.remove('active');
+      if(this.id == gnbItem.dataset.target){
+        gnbItem.classList.add('active');
+      }
+    });
+  }
+
+  function lnbMouseLeave(){
+    $gnb.forEach(gnbItem => gnbItem.classList.remove('active'));
+  }
+</script>

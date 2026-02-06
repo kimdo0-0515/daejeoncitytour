@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- favicon -->
+  <link rel="icon" href="img/daejeon_symbol.ico">
+  <title>이용 후기</title>
+  <!-- library css -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!-- initial setting css -->
+  <link rel="stylesheet" href="css/common/font.css">
+  <link rel="stylesheet" href="css/common/variable.css">
+  <link rel="stylesheet" href="css/common/reset.css">
+  <!-- custom css -->
+  <link rel="stylesheet" href="css/common/component.css">
+  <link rel="stylesheet" href="css/common/basic-layout.css">
+  <link rel="stylesheet" href="css/sub03/style.css">
+  <link rel="stylesheet" href="css/sub03/responsive-tab.css">
+  <link rel="stylesheet" href="css/sub03/responsive-mo.css">
+
+  <!-- library js -->
+  <script src="library/jquery/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#header').load('include/header.html');
+      $('#footer').load('include/footer.html');
+      $('#hamWrap').load('include/moMenu.html');
+    });
+  </script>
+</head>
+<body class="body" id="sub03Body">
+  <div class="body__inner">
+
+    <!-- header include -->
+    <header class="header" id="header"></header>
+
+
+
+    <main class="main">
+      <section class="section">
+        <div class="section__inner">
+          <div class="page-title">
+            <div class="page-title__rect"></div>
+            <h2>이용 후기</h2>
+          </div>
+
+          <div class="section__content">
+            <div class="content__top">
+              <div class="count">총 <span id="reviewCount">00</span>개</div>
+              <div class="page-button">
+                <div class="page-button-right">
+                  <button class="btn btn--medium btn--green"><span>후기 작성하기</span></button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="content">
+              <!-- 리뷰 박스 UI -->
+              <!-- <div class="review" id="">
+                <div class="review__text-wrap">
+                  <div class="title--kr-s">
+                    이용 후기의 제목입니다. 이용 후기의 제목입니다. 이용 후기의 제목입니다. 이용 후기의 제목입니다. 이용 후기의 제목입니다. 이용 후기의 제목입니다.
+                  </div>
+                  <div class="review__info body--kr-s">
+                    <div class="review__write">
+                      <span class="writer">김*명</span>
+                      <span class="date">2025-12-08</span>
+                    </div>
+                    <div class="review__rating rating--red rating--blue">
+                      <i class="fa-solid fa-thumbs-up icon--large"></i>
+                      <i class="fa-solid fa-thumbs-down icon--large"></i>
+                      <span>이 투어를 추천해요 개선이 필요해요</span>
+                    </div>
+                  </div>
+                  <div class="review__content">
+                    투어 후기 내용입니다. 투어 후기 내용입니다. 투어 후기 내용입니다. 투어 후기 내용입니다. 투어 후기 내용입니다. 투어 후기 내용입니다. 투어 후기 내용입니다. 투어 후기 내용입니다. 투어 후기 내용입니다. 투어 후기 내용입니다. 투어 후기 내용입니다. 투어 내용은 3줄까지만 보입니다.
+                  </div>
+                  <div class="review__arrow-mo">
+                    <span>더보기</span>
+                    <i class="fa-solid fa-chevron-down icon--large"></i>
+                  </div>
+                </div>
+                <div class="review__img-wrap">
+                  <img src="img/sub03/bread01.jpg" alt="리뷰 이미지">
+                  <img src="img/sub03/food01.jpg" alt="리뷰 이미지">
+                  <img src="img/sub03/place01.jpg" alt="리뷰 이미지">
+                </div>
+              </div> -->
+            </div>
+          </div>  <!-- section__content -->
+        </div>  <!-- section__inner -->
+      </section>
+    </main>
+
+
+
+    <!-- footer include -->
+    <footer class="footer" id="footer"></footer>
+  </div>  <!-- body__inner -->
+
+
+
+  <!-- 태블릿 & 모바일 햄버거 메뉴 include -->
+  <div class="ham-wrap" id="hamWrap"></div>
+
+
+
+  <script src="js/sub03/object.js"></script>
+  <script src="js/sub03/script.js"></script>
+</body>
+</html>

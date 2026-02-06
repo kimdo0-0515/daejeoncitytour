@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- favicon -->
+  <link rel="icon" href="img/daejeon_symbol.ico">
+  <title>대전시티투어</title>
+  <!-- library css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="library/swiper/swiper-bundle.min.css">
+  <!-- initial setting css -->
+  <link rel="stylesheet" href="css/common/font.css">
+  <link rel="stylesheet" href="css/common/variable.css">
+  <link rel="stylesheet" href="css/common/reset.css">
+  <!-- custom css -->
+  <link rel="stylesheet" href="css/common/component.css">
+  <link rel="stylesheet" href="css/common/basic-layout.css">
+  <link rel="stylesheet" href="css/main/style.css">
+  <link rel="stylesheet" href="css/main/responsive-tab.css">
+  <link rel="stylesheet" href="css/main/responsive-mo.css">
+
+  <!-- library js -->
+  <script src="library/jquery/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="library/swiper/swiper-bundle.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#header').load('include/header.html');
+      $('#footer').load('include/footer.html', function(){
+        screenResize(); // footer 로드 후 최초 판단 필요
+      });
+      $('#hamWrap').load('include/moMenu.html');
+    });
+  </script>
+</head>
+<body class="body" id="mainBody"> <!-- 한글 버전일 때 'body--kr', 영어 버전일 때 'body--en' 추가 -->
+  <div class="body__inner">
+
+    <!-- header include -->
+    <header class="header" id="header"></header>
+
+
+
+    <main class="main">
+      <!--===== section: 메인 비주얼 =====-->
+      <section class="section" id="mainVisualSec">
+        <div class="swiper" id="mainVisual">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img/main/mainVisual/main_visual_1.jpg" alt="mainVisual_1" />
+              <div class="slide-layer">
+                <div class="slide-txt-wrap">
+                  <h1>한밭수목원</h1>
+                  <p class="title--kr-m">
+                    시원스레 펼쳐진 푸르른 숲의 이색적인 풍경, 한 폭의 서양화처럼<br>
+                    도시와 잘 어우러지며 계절마다 색다른 매력이 펼쳐집니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/main/mainVisual/main_visual_2.jpg" alt="mainVisual_2" />
+              <div class="slide-layer">
+                <div class="slide-txt-wrap">
+                  <h1>대청호반</h1>
+                  <p class="title--kr-m">
+                    청정 자연의 모습이 담긴 잔잔한 호수 위로 부는 산뜻한 바람이<br>
+                    일상에 고요한 여유를 선물합니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/main/mainVisual/main_visual_3.png" alt="mainVisual_3" />
+              <div class="slide-layer">
+                <div class="slide-txt-wrap">
+                  <h1>계족산 황톳길</h1>
+                  <p class="title--kr-m">
+                    특별한 산책길에서 자연이 주는 건강한 휴식,<br>
+                    따뜻한 흙과 숲의 향을 맨발로 온전히 누려보세요.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/main/mainVisual/main_visual_4.jpg" alt="mainVisual_4" />
+              <div class="slide-layer">
+                <div class="slide-txt-wrap">
+                  <h1>대전시립미술관</h1>
+                  <p class="title--kr-m">
+                    감각적인 전시와  여유로운 공간에서 일상과 예술이 이어집니다.<br>
+                    당신의 사색과 영감에 머물러 보세요.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>  <!-- mainVisualSec -->
+
+
+      <!--===== section: 자주 찾는 메뉴 =====-->
+      <section class="section" id="favMenuSec">
+        <div class="section__inner">
+          <ul class="fav-menu-wrap">
+            <li class="fav-menu">
+              <a href="#none">
+                <div class="fav-menu_icon-wrap">
+                  <img class="fav-menu__icon" src="img/main/fav/favMenu01.png" alt="favMenu01">
+                  <img class="fav-menu__icon--active" src="img/main/fav/favMenu01_w.png" alt="favMenu01">
+                </div>
+                <p class="title--kr-m">코스 안내</p>
+              </a>
+            </li>
+            <li class="fav-menu">
+              <a href="sub01.html">
+                <div class="fav-menu_icon-wrap">
+                  <img class="fav-menu__icon" src="img/main/fav/favMenu02.png" alt="favMenu02">
+                  <img class="fav-menu__icon--active" src="img/main/fav/favMenu02_w.png" alt="favMenu02">
+                </div>
+                <p class="title--kr-m">예약 신청</p>
+              </a>
+            </li>
+            <li class="fav-menu">
+              <a href="#none">
+                <div class="fav-menu_icon-wrap">
+                  <img class="fav-menu__icon" src="img/main/fav/favMenu03.png" alt="favMenu03">
+                  <img class="fav-menu__icon--active" src="img/main/fav/favMenu03_w.png" alt="favMenu02">
+                </div>
+                <p class="title--kr-m">예약 확인</p>
+              </a>
+            </li>
+            <li class="fav-menu">
+              <a href="sub03.html">
+                <div class="fav-menu_icon-wrap">
+                  <img class="fav-menu__icon" src="img/main/fav/favMenu04.png" alt="favMenu04">
+                  <img class="fav-menu__icon--active" src="img/main/fav/favMenu04_w.png" alt="favMenu02">
+                </div>
+                <p class="title--kr-m">이용 후기</p>
+              </a>
+            </li>
+            <li class="fav-menu">
+              <a href="sub02.html">
+                <div class="fav-menu_icon-wrap">
+                  <img class="fav-menu__icon" src="img/main/fav/favMenu05.png" alt="favMenu05">
+                  <img class="fav-menu__icon--active" src="img/main/fav/favMenu05_w.png" alt="favMenu02">
+                </div>
+                <p class="title--kr-m">공지사항</p>
+              </a>
+            </li>
+            <li class="fav-menu">
+              <a href="#none">
+                <div class="fav-menu_icon-wrap">
+                  <img class="fav-menu__icon" src="img/main/fav/favMenu06.png" alt="favMenu06">
+                  <img class="fav-menu__icon--active" src="img/main/fav/favMenu06_w.png" alt="favMenu02">
+                </div>
+                <p class="title--kr-m">외국어 안내</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>  <!-- favMenuSec -->
+
+
+      <!--===== section: 마실코스 =====-->
+      <section class="section" id="masilSec">
+        <div class="section__inner">
+          <div class="section__divide-left">
+            <h2>마실 코스 안내</h2>
+            <div class="masil-desc-wrap">
+              <p class="title--kr-l">
+                여러가지 테마를 매일 색다르게!
+              </p>
+              <p class="title--kr-m masil-desc__desc">
+                대전시티투어를 통해 대전의 여러가지 모습을 엿볼 수 있어요.<br>
+                유쾌한 해설사와 함께 매일 각기 다른 테마로 구성된 코스를 여행해봐요.
+              </p>
+            </div>
+            <div class="filter-set--large">
+              <label class="filter">
+                <input type="radio" name="filterMasil" id="filterTue" data-target="masilTue" checked>
+                <i class="fa-solid fa-book-open icon--xlarge"></i>
+                <span class="filter__nm">화요일 지식 투어</span>
+              </label>
+              <label class="filter">
+                <input type="radio" name="filterMasil" id="filterWed" data-target="masilWed">
+                <i class="fa-solid fa-building-columns icon--xlarge"></i>
+                <span class="filter__nm">수요일 문화 투어</span>
+              </label>
+              <label class="filter">
+                <input type="radio" name="filterMasil" id="filterThu" data-target="masilThu">
+                <i class="fa-solid fa-tree icon--xlarge"></i>
+                <span class="filter__nm">목요일 숲길 투어</span>
+              </label>
+              <label class="filter">
+                <input type="radio" name="filterMasil" id="filterFri" data-target="masilFri">
+                <i class="fa-solid fa-palette icon--xlarge"></i>
+                <span class="filter__nm">금요일 예술 투어</span>
+              </label>
+              <label class="filter">
+                <input type="radio" name="filterMasil" id="filterSat" data-target="masilSat">
+                <i class="fa-solid fa-leaf icon--xlarge"></i>
+                <span class="filter__nm">토요일 자연체험 투어</span>
+              </label>
+              <label class="filter">
+                <input type="radio" name="filterMasil" id="filterSun" data-target="masilSun">
+                <i class="fa-solid fa-mountain icon--xlarge"></i>
+                <span class="filter__nm">일요일 자연체험 투어</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="section__divide-right">
+            <div class="masil-course-wrap">
+              <img class="bus-img" src="img/illust/bus.png" alt="bus">
+
+              <div class="masil-course" id="masilTue">
+                <div class="masil">
+                  <div class="masil__img--garden"></div>
+                  <div class="masil__info">
+                    <div class="title--kr-m">명상정원</div>
+                    <p class="body--kr-m">
+                      대청호의 수려한 풍경을 감상할 수 있는 산책길
+                    </p>
+                  </div>
+                </div>
+                <div class="masil">
+                  <div class="masil__img--market"></div>
+                  <div class="masil__info">
+                    <div class="title--kr-m">중앙시장</div>
+                    <p class="body--kr-m">
+                      먹거리 가득한 재래시장에서 맛있는 점심 식사
+                    </p>
+                  </div>
+                </div>
+                <div class="masil">
+                  <div class="masil__img--ancestor"></div>
+                  <div class="masil__info">
+                    <div class="title--kr-m">뿌리공원/한국족보박물관</div>
+                    <p class="body--kr-m">
+                      평범한 사람들의 특별한 기록
+                    </p>
+                  </div>
+                </div>
+                <div class="masil">
+                  <div class="masil__img--sangso"></div>
+                  <div class="masil__info">
+                    <div class="title--kr-m">상소동산림욕장</div>
+                    <p class="body--kr-m">
+                      자연체험과 휴양을 위한 아름다운 숲속길
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="masil-course" id="masilWed">
+                <div class="masil">
+                  <div class="masil__img--temi"></div>
+                  <div class="masil__info">
+                    <div class="title--kr-m">테미오래</div>
+                    <p class="body--kr-m">
+                      근대와 현대가 공존하는 역사문화공간
+                    </p>
+                  </div>
+                </div>
+                <div class="masil">
+                  <div class="masil__img--market"></div>
+                  <div class="masil__info">
+                    <div class="title--kr-m">중앙시장</div>
+                    <p class="body--kr-m">
+                      먹거리 가득한 재래시장에서 맛있는 점심 식사
+                    </p>
+                  </div>
+                </div>
+                <div class="masil">
+                  <div class="masil__img--cemetery"></div>
+                  <div class="masil__info">
+                    <div class="title--kr-m">국립대전현충원</div>
+                    <p class="body--kr-m">
+                      민족정서를 함양하는 묘역공원
+                    </p>
+                  </div>
+                </div>
+                <div class="masil">
+                  <div class="masil__img--museum"></div>
+                  <div class="masil__info">
+                    <div class="title--kr-m">대전시립박물관</div>
+                    <p class="body--kr-m">
+                      대전의 역사와 문화를 한번에 살펴보기
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="masil-course" id="masilThu">
+                <div class="masil">
+                  <div class="masil__img--jangtae"></div>
+                  <div class="masil__info">
+                    <div class="title--kr-m">장태산자연휴양림</div>
+                    <p class="body--kr-m">
+                      하늘높이 솟은 메타세콰이어가 아름다운 곳
+                    </p>
+                  </div>
+                </div>
+                <div class="masil">
+                  <div class="masil__img--lunch"></div>
+                  <div class="masil__info">
+                    <div class="title--kr-m">장태산 식당</div>
+                    <p class="body--kr-m">
+                      상쾌한 자연 속에서 건강한 점심 식사
+                    </p>
+                  </div>
+                </div>
+                <div class="masil">
+                  <div class="masil__img--history"></div>
+                  <div class="masil__info">
+                    <div class="title--kr-m">대전근현대사전시관</div>
+                    <p class="body--kr-m">
+                      문화유산 아래 펼쳐지는 대전 역사의 숨결
+                    </p>
+                  </div>
+                </div>
+                <div class="masil">
+                  <div class="masil__img--edu"></div>
+                  <div class="masil__info">
+                    <div class="title--kr-m">한밭교육박물관</div>
+                    <p class="body--kr-m">
+                      대한민국 교육의 역사와 민족 비극의 현대사
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="masil-course" id="masilFri">
+                <div class="masil">
+                  <div class="masil__img--nature"></div>
+                  <div class="masil__info">
+                    <div class="title--kr-m">대청호자연생태관</div>
+                    <p class="body--kr-m">
+                      미디어로 체험하는 대청호의 자연과 생태
+                    </p>
+                  </div>
+                </div>
+                <div class="masil">
+                  <div class="masil__img--market"></div>
+                  <div class="masil__info">
+                    <div class="title--kr-m">중앙시장</div>
+                    <p class="body--kr-m">
+                      먹거리 가득한 재래시장에서 맛있는 점심 식사
+                    </p>
+                  </div>
+                </div>
+                <div class="masil">
+                  <div class="masil__img--art-museum"></div>
+                  <div class="masil__info">
+                    <div class="title--kr-m">대전시립미술관</div>
+                    <p class="body--kr-m">
+                      현대의 사회와 문화가 융합된 미술
+                    </p>
+                  </div>
+                </div>
+                <div class="masil">
+                  <div class="masil__img--tree"></div>
+                  <div class="masil__info">
+                    <div class="title--kr-m">한밭수목원</div>
+                    <p class="body--kr-m">
+                      도심 속의 싱그러운 자연 공간
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="masil-course" id="masilSat">
+                <div class="masil">
+                  <div class="masil__img--tree"></div>
+                  <div class="masil__info">
+                    <div class="title--kr-m">한밭수목원</div>
+                    <p class="body--kr-m">
+                      도심 속의 싱그러운 자연 공간
+                    </p>
+                  </div>
+                </div>
+                <div class="masil">
+                  <div class="masil__img--art-complex"></div>
+                  <div class="masil__info">
+                    <div class="title--kr-m">대전문화예술단지</div>
+                    <p class="body--kr-m">
+                      점과 점이 만나 선이 되는 대전의 문화벨트
+                    </p>
+                  </div>
+                </div>
+                <div class="masil">
+                  <div class="masil__img--gye"></div>
+                  <div class="masil__info">
+                    <div class="title--kr-m">계족산 황톳길 체험</div>
+                    <p class="body--kr-m">
+                      맨발로 떠나는 피톤치드 산책길
+                    </p>
+                  </div>
+                </div>
+                <div class="masil">
+                  <div class="masil__img--classic"></div>
+                  <div class="masil__info">
+                    <div class="title--kr-m">클래식 음악회</div>
+                    <p class="body--kr-m">
+                      숲속에서 흐르는 아름다운 선율
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="masil-course" id="masilSun">
+                <div class="masil">
+                  <div class="masil__img--garden"></div>
+                  <div class="masil__info">
+                    <div class="title--kr-m">명상정원</div>
+                    <p class="body--kr-m">
+                      대청호의 수려한 풍경을 감상할 수 있는 산책길
+                    </p>
+                  </div>
+                </div>
+                <div class="masil">
+                  <div class="masil__img--nature"></div>
+                  <div class="masil__info">
+                    <div class="title--kr-m">대청호자연생태관</div>
+                    <p class="body--kr-m">
+                      미디어로 체험하는 대청호의 자연과 생태
+                    </p>
+                  </div>
+                </div>
+                <div class="masil">
+                  <div class="masil__img--eun"></div>
+                  <div class="masil__info">
+                    <div class="title--kr-m">으능정이 문화의 거리</div>
+                    <p class="body--kr-m">
+                      쇼핑과 함께 하는 맛집 투어
+                    </p>
+                  </div>
+                </div>
+                <div class="masil">
+                  <div class="masil__img--jangtae"></div>
+                  <div class="masil__info">
+                    <div class="title--kr-m">장태산자연휴양림</div>
+                    <p class="body--kr-m">
+                      하늘높이 솟은 메타세콰이어가 아름다운 곳
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="page-button">
+              <div class="page-button-wide">
+                <button class="btn btn--large btn--green"><span>마실 코스 예약하기</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>  <!-- masilSec -->
+
+
+      <!--===== section: 특별 코스 =====-->
+      <section class="section" id="specialSec">
+        <div class="specialSec-title-wrap">
+          <div class="specialSec-title">
+            <h1>특별 코스 안내</h1>
+            <div class="title--kr-l">
+              미술과 음악, 빵이 함께하는 특별한 코스!<br>
+              대전시티투어와 함께 떠나보세요.
+            </div>
+          </div>
+        </div>
+        
+        <div class="section__special">
+          <div class="special-bread">
+            <div class="special__title">빵의 도시에서 빵지순례, <em>대전 빵시투어</em></div>
+            <div class="special__desc">
+              <p class="title--kr-l">
+                한 번에 즐기는 대전의 대표 빵집 다섯 곳!
+              </p>
+              <p class="body--kr-l">
+                고소한 냄새 따라 골목을 걸으면, 대전의 맛과 이야기가 빵 속에 녹아있어요.
+              </p>
+            </div>
+            <div class="bakery-wrap" id="bakeryWrap">
+              <div class="bakery">
+                <div class="bakery__nm title--kr-s">콜드버터베이크샵</div>
+              </div>
+              <div class="bakery">
+                <div class="bakery__nm title--kr-s">성심당 롯데백화점</div>
+              </div>
+              <div class="bakery">
+                <div class="bakery__nm title--kr-s">슬로우 브레드</div>
+              </div>
+              <div class="bakery">
+                <div class="bakery__nm title--kr-s">빵 한모금</div>
+              </div>
+              <div class="bakery">
+                <div class="bakery__nm title--kr-s">오렌지블로썸</div>
+              </div>
+              <div class="bakery--img">
+                <img src="img/illust/bakery.png" alt="베이커리">
+                <img src="img/illust/bread.png" alt="꿈돌이 빵">
+              </div>
+            </div>
+            <div class="page-button">
+              <div class="page-button-wide">
+                <button class="btn btn--large btn--green"><span>대전 빵시투어 예약하기</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="special-summer" id="specialSummer">
+            <div class="special__title">숲속에서 상쾌한 하룻밤, <em>여름 숲스테이</em></div>
+            <div class="special__desc">
+              <p class="title--kr-l">
+                도심을 벗어나 숲으로 떠나는 여름의 하룻밤
+              </p>
+              <p class="body--kr-l">
+                국립대전숲체원에서 시원한 바람을 맞으며 체험, 산책, 힐링이 함께하는 시간을 누려보세요.
+              </p>
+            </div>
+            <div class="summer__slide swiper" id="summerSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide summer__slide-img" id="summerImg1"></div>
+                <div class="swiper-slide summer__slide-img" id="summerImg2"></div>
+                <div class="swiper-slide summer__slide-img" id="summerImg3"></div>
+              </div>
+            </div>
+            <div class="page-button">
+              <div class="page-button-wide">
+                <button class="btn btn--large btn--green"><span>여름 숲스테이 예약하기</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="special-autumn">
+            <div class="special__title">신나는 음악과 대전 야경 투어, <em>가을 뮤직버스</em></div>
+            <div class="special__desc">
+              <p class="title--kr-l">
+                라디오 감성, 기타 선율, 그리고 대전의 밤
+              </p>
+              <p class="body--kr-l">
+                신청곡과 사연으로 물드는 버스, 가을밤을 따라 흘러가는 음악여행이 펼쳐집니다.
+              </p>
+            </div>
+            <div class="swiper" id="autumnSlide">
+              <div class="film-effect-row">
+                <div class="film-effect"></div>
+              </div>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="img/special/autumn_1.jpg" alt="야경">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/special/autumn_2.jpg" alt="야경">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/special/autumn_3.jpg" alt="야경">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/special/autumn_4.jpg" alt="야경">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/special/autumn_1.jpg" alt="야경">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/special/autumn_2.jpg" alt="야경">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/special/autumn_3.jpg" alt="야경">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/special/autumn_4.jpg" alt="야경">
+                </div>
+              </div>
+              <div class="film-effect-row">
+                <div class="film-effect"></div>
+              </div>
+            </div>
+            <img class="sing-img" src="img/illust/sing.png" alt="꿈돌이">
+            <div class="page-button">
+              <div class="page-button-wide">
+                <button class="btn btn--large btn--green"><span>가을 뮤직버스 예약하기</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>  <!-- specialSec -->
+
+
+      <!--===== section: 새로운 소식 =====-->
+      <section class="section" id="updateSec">
+        <div class="section__inner">
+          <h2>새로운 소식</h2>
+          <div class="section__divide">
+            <div class="notice-sec">
+              <div class="title-btn-wrap">
+                <div class="title--kr-l">공지사항</div>
+                <div class="page-button">
+                  <div class="page-button-right">
+                    <button class="btn btn--medium btn--yellow"><span>전체 보기</span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="notice-wrap">
+                <div class="notice">
+                  <img src="img/main/updates/notice_1.png" alt="공지">
+                  <div class="notice__info">
+                    <div class="notice__title-date">
+                      <div class="title title--kr-s">공지사항 제목 예시입니다.</div>
+                      <div class="date body--kr-m">2025-10-25</div>
+                    </div>
+                    <p class="preview body--kr-m">
+                      공지 내용 미리 보기 텍스트 예시입니다.
+                    </p>
+                  </div>
+                </div>
+                <div class="notice">
+                  <img src="img/main/updates/notice_2.png" alt="공지">
+                  <div class="notice__info">
+                    <div class="notice__title-date">
+                      <div class="title title--kr-s">공지사항 제목 예시입니다.</div>
+                      <div class="date body--kr-m">2025-10-25</div>
+                    </div>
+                    <p class="preview body--kr-m">
+                      공지 내용 미리 보기 텍스트 예시입니다.
+                    </p>
+                  </div>
+                </div>
+                <div class="notice">
+                  <img src="img/main/updates/notice_3.png" alt="공지">
+                  <div class="notice__info">
+                    <div class="notice__title-date">
+                      <div class="title title--kr-s">공지사항 제목 예시입니다.</div>
+                      <div class="date body--kr-m">2025-10-25</div>
+                    </div>
+                    <p class="preview body--kr-m">
+                      공지 내용 미리 보기 텍스트 예시입니다.
+                    </p>
+                  </div>
+                </div>
+                <div class="notice">
+                  <img src="img/main/updates/notice_4.png" alt="공지">
+                  <div class="notice__info">
+                    <div class="notice__title-date">
+                      <div class="title title--kr-s">공지사항 제목 예시입니다. 제목이 길어지는 경우 이렇게 말줄임표로 표시하면 됩니다.</div>
+                      <div class="date body--kr-m">2025-10-25</div>
+                    </div>
+                    <p class="preview body--kr-m">
+                      공지 내용 미리 보기 텍스트 예시입니다. 내용이 길어지는 경우 이렇게 말줄임표로 표시하면 됩니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="popup-sec">
+              <div class="title-btn-wrap">
+                <div class="title--kr-l">팝업존</div>
+                <div class="page-button">
+                  <div class="page-button-right">
+                    <button class="btn btn--medium btn--yellow"><span>전체 보기</span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper" id="popupZone">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="img/main/updates/popup_1.jpg" alt="팝업존">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/main/updates/popup_2.jpg" alt="팝업존">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/main/updates/popup_3.jpg" alt="팝업존">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/main/updates/popup_4.png" alt="팝업존">
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>  <!-- updateSec -->
+
+
+      <!--===== section: 제휴 호텔 =====-->
+      <section class="section" id="hotelSec">
+        <h2>제휴 호텔</h2>
+        <div class="swiper" id="hotelSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img/main/hotel/hotel_1_onoma.jpg" alt="호텔 오노마">
+              <div class="hotel-hover">
+                <div class="hotel-hover__border">
+                  <div class="title--kr-l">호텔 오노마</div>
+                  <a href="https://www.marriott.co.kr/CJJAK">
+                    <i class="fa-solid fa-link icon--large"></i>
+                    <span class="body--kr-m">사이트 바로가기</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide slide--vertical">
+              <img src="img/main/hotel/hotel_2_lotte.jpg" alt="롯데시티호텔">
+              <div class="hotel-hover">
+                <div class="hotel-hover__border">
+                  <div class="title--kr-l">롯데시티호텔</div>
+                  <a href="https://www.lottehotel.com/daejeon-city/ko">
+                    <i class="fa-solid fa-link icon--large"></i>
+                    <span class="body--kr-m">사이트 바로가기</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/main/hotel/hotel_3_skypark.jpg" alt="호텔 스카이파크">
+              <div class="hotel-hover">
+                <div class="hotel-hover__border">
+                  <div class="title--kr-l">호텔 스카이파크</div>
+                  <a href="https://www.skyparkhotel.com/">
+                    <i class="fa-solid fa-link icon--large"></i>
+                    <span class="body--kr-m">사이트 바로가기</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/main/hotel/hotel_4_ICC.jpg" alt="호텔 ICC">
+              <div class="hotel-hover">
+                <div class="hotel-hover__border">
+                  <div class="title--kr-l">호텔 ICC</div>
+                  <a href="http://hotel.hotelicc.com/">
+                    <i class="fa-solid fa-link icon--large"></i>
+                    <span class="body--kr-m">사이트 바로가기</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide slide--vertical">
+              <img src="img/main/hotel/hotel_5_sunshine.png" alt="호텔 선샤인">
+              <div class="hotel-hover">
+                <div class="hotel-hover__border">
+                  <div class="title--kr-l">호텔 선샤인</div>
+                  <a href="https://hotelsunshine.kr/">
+                    <i class="fa-solid fa-link icon--large"></i>
+                    <span class="body--kr-m">사이트 바로가기</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/main/hotel/hotel_6_intercity.jpg" alt="호텔 인터시티">
+              <div class="hotel-hover">
+                <div class="hotel-hover__border">
+                  <div class="title--kr-l">호텔 인터시티</div>
+                  <a href="http://www.hotelinterciti.com/">
+                    <i class="fa-solid fa-link icon--large"></i>
+                    <span class="body--kr-m">사이트 바로가기</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>  <!-- hotelSec -->
+
+
+      <!--===== section: 시티투어 이용 안내 =====-->
+      <section class="section" id="busSec">
+        <div class="section__inner">
+          <h2>시티투어 이용 안내</h2>
+          <div class="section__content">
+            <!-- 모바일에서만 활성화 -->
+            <div class="bus-stop__mo tab-wrap--small">
+              <label class="tab">
+                <input type="radio" name="busStopTab" id="busStopTab_lounge" checked>
+                <span class="tab__nm">대전트래블라운지</span>
+              </label>
+              <label class="tab">
+                <input type="radio" name="busStopTab" id="busStopTab_cityhall">
+                <span class="tab__nm">대전시청 남문광장</span>
+              </label>
+            </div>
+            <div class="bus-stop-wrap" id="busStopWrap1">
+              <div class="map">
+                <img src="img/main/guide/bus_stop_1.PNG" alt="버스 탑승장">
+              </div>
+              <div class="bus-stop">
+                <div class="bus-stop__title">
+                  <img src="img/illust/bus_stop.png" alt="버스 아이콘">
+                  <div class="title--kr-l">대전트래블라운지</div>
+                </div>
+                <!-- 태블릿에서만 활성화 -->
+                <div class="bus-stop__tab tab-wrap--small">
+                  <label class="tab">
+                    <input type="radio" name="travelLoungeTab" id="travelLoungeTab_subway" checked>
+                    <span class="tab__nm">지하철 이용</span>
+                  </label>
+                  <label class="tab">
+                    <input type="radio" name="travelLoungeTab" id="travelLoungeTab_bus">
+                    <span class="tab__nm">버스 이용</span>
+                  </label>
+                </div>
+                <div class="bus-stop__route">
+                  <div class="subway-route" id="travelLounge_subwayRoute">
+                    <div class="subway-row">
+                      <div class="subway-row__left">
+                        <i class="fa-solid fa-train icon--xlarge"></i>
+                      </div>
+                      <div class="title--kr-s">대전역 지하철 4번 출구</div>
+                    </div>
+                    <div class="subway-row">
+                      <div class="subway-row__left">
+                        <div class="subway-circle"></div>
+                      </div>
+                      <div class="body--kr-l">지하도 이동 (5~6분 소요)</div>
+                    </div>
+                    <div class="subway-row">
+                      <div class="subway-row__left">
+                        <div class="subway-circle"></div>
+                      </div>
+                      <div class="title--kr-s">대전트래블라운지 도착</div>
+                    </div>
+                  </div>
+                  <div class="bus-route" id="travelLounge_busRoute">
+                    <div class="bus-route__box">
+                      <div class="bus-route__nm">
+                        <i class="fa-solid fa-bus icon--xlarge"></i>
+                        <div class="title--kr-s">목척교 버스 정류장</div>
+                      </div>
+                      <div class="bus-route__con">
+                        <div class="bus-route__row body--kr-m">
+                          <span class="bus-label--blue">간선</span>
+                          <p>311, 313, 514, 613, 615</p>
+                        </div>
+                        <div class="bus-route__row body--kr-m">
+                          <span class="bus-label--green">지선</span>
+                          <p>313, 314</p>
+                        </div>
+                        <div class="bus-route__row body--kr-m">
+                          <span class="bus-label--red">급행</span>
+                          <p>급행 1</p>
+                        </div>
+                        <div class="bus-route__row body--kr-m">
+                          <i class="fa-solid fa-arrow-right icon--small"></i>
+                          <p>도보 이동 (1~2분 소요)</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="page-button">
+                  <div class="page-button-right">
+                    <button class="btn btn--large btn--green">
+                      <span>네이버 지도 보기</span>
+                      <i class="fa-solid fa-arrow-up-right-from-square icon--large"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bus-stop-wrap" id="busStopWrap2">
+              <div class="map">
+                <img src="img/main/guide/bus_stop_2.PNG" alt="버스 탑승장">
+              </div>
+               <div class="bus-stop">
+                <div class="bus-stop__title">
+                  <img src="img/illust/bus_stop.png" alt="버스 아이콘">
+                  <div class="title--kr-l">대전시청 남문광장</div>
+                </div>
+                <!-- 태블릿에서만 활성화 -->
+                <div class="bus-stop__tab tab-wrap--small">
+                  <label class="tab">
+                    <input type="radio" name="cityhallTab" id="cityhallTab_subway" checked>
+                    <span class="tab__nm">지하철 이용</span>
+                  </label>
+                  <label class="tab">
+                    <input type="radio" name="cityhallTab" id="cityhallTab_bus">
+                    <span class="tab__nm">버스 이용</span>
+                  </label>
+                </div>
+                <div class="bus-stop__route">
+                  <div class="subway-route" id="cityhall_subwayRoute">
+                    <div class="subway-row">
+                      <div class="subway-row__left">
+                        <i class="fa-solid fa-train icon--xlarge"></i>
+                      </div>
+                      <div class="title--kr-s">시청역 지하철 1번 출구</div>
+                    </div>
+                    <div class="subway-row">
+                      <div class="subway-row__left">
+                        <div class="subway-circle"></div>
+                      </div>
+                      <div class="body--kr-l">지하도 이동 (5~7분 소요)</div>
+                    </div>
+                    <div class="subway-row">
+                      <div class="subway-row__left">
+                        <div class="subway-circle"></div>
+                      </div>
+                      <div class="title--kr-s">대전시청 남문광장 도착</div>
+                    </div>
+                  </div>
+                  <div class="bus-route" id="cityhall_busRoute">
+                    <div class="bus-route__box">
+                      <div class="bus-route__nm">
+                        <i class="fa-solid fa-bus icon--xlarge"></i>
+                        <div class="title--kr-s">둔산초등학교 버스 정류장</div>
+                      </div>
+                      <div class="bus-route__con">
+                        <div class="bus-route__row body--kr-m">
+                          <span class="bus-label--blue">간선</span>
+                          <p>618</p>
+                        </div>
+                        <div class="bus-route__row body--kr-m">
+                          <i class="fa-solid fa-arrow-right icon--small"></i>
+                          <p>도보 이동 (4~6분 소요)</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bus-route__box">
+                      <div class="bus-route__nm">
+                        <i class="fa-solid fa-bus icon--xlarge"></i>
+                        <div class="title--kr-s">샤크존 버스 정류장</div>
+                      </div>
+                      <div class="bus-route__con">
+                        <div class="bus-route__row body--kr-m">
+                          <span class="bus-label--blue">간선</span>
+                          <p>104</p>
+                        </div>
+                        <div class="bus-route__row body--kr-m">
+                          <span class="bus-label--green">지선</span>
+                          <p>911</p>
+                        </div>
+                        <div class="bus-route__row body--kr-m">
+                          <i class="fa-solid fa-arrow-right icon--small"></i>
+                          <p>도보 이동 (5~7분 소요)</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="page-button">
+                  <div class="page-button-right">
+                    <button class="btn btn--large btn--green">
+                      <span>네이버 지도 보기</span>
+                      <i class="fa-solid fa-arrow-up-right-from-square icon--large"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main> <!-- busSec -->
+
+
+
+    <!-- footer include -->
+    <footer class="footer" id="footer"></footer>
+  </div>  <!-- body__inner -->
+
+
+
+  <!--===== 스크롤 컨트롤러 =====-->
+  <div class="scroll-controller">
+    <ul>
+      <li class="scroll-controller__li">
+        <a href="#">
+          <i class="fa-solid fa-circle-chevron-up"></i>
+          <span class="title--kr-s">맨 위로 이동</span>
+        </a>
+      </li>
+      <li class="scroll-controller__li">
+        <a href="#masilSec">
+          <i class="fa-solid fa-location-dot"></i>
+          <span class="title--kr-s">마실 코스 안내</span>
+        </a>
+      </li>
+      <li class="scroll-controller__li">
+        <a href="#specialSec">
+          <i class="fa-solid fa-star"></i>
+          <span class="title--kr-s">특별 코스 안내</span>
+        </a>
+      </li>
+      <li class="scroll-controller__li">
+        <a href="#updateSec">
+          <i class="fa-solid fa-envelope"></i>
+          <span class="title--kr-s">새로운 소식</span>
+        </a>
+      </li>
+      <li class="scroll-controller__li">
+        <a href="#hotelSec">
+          <i class="fa-solid fa-bed"></i>
+          <span class="title--kr-s">제휴 호텔</span>
+        </a>
+      </li>
+      <li class="scroll-controller__li">
+        <a href="#busSec">
+          <i class="fa-solid fa-bus-simple"></i>
+          <span class="title--kr-s">시티투어 이용 안내</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+  <!--===== 플로팅 버튼 =====-->
+  <div class="floating-wrap">
+    <div class="floating-toggle">
+      <div class="accdn">
+        <div class="accdn__title">
+          <div class="title--kr-xs">당일 예약도 가능한가요?</div>
+          <i class="fa-solid fa-chevron-down icon--large"></i>
+        </div>
+        <div class="accdn__content body--kr-m">
+          대전시티투어는 사전예약으로 이루어지며, 홈페이지와 예약 전화로 예약 가능합니다.<br>
+          출발 전일 17:30까지 예약 및 입금이 완료되어야 예약이 확정됩니다.<br>
+          사전예약 마감 시 현장 탑승은 불가하므로 사전예약 이용 부탁드립니다.
+        </div>
+      </div>
+      <div class="accdn">
+        <div class="accdn__title">
+          <div class="title--kr-xs">투어 비용에 미포함 항목이 있나요?</div>
+          <i class="fa-solid fa-chevron-down icon--large"></i>
+        </div>
+        <div class="accdn__content body--kr-m">
+          입장료/식사/기타 개인 비용은 불포함입니다.<br>
+          여행자 보험 또한 별도이니 투어 전 미리 가입하시는 것을 추천드립니다.
+        </div>
+      </div>
+      <div class="accdn">
+        <div class="accdn__title">
+          <div class="title--kr-xs">예약을 변경 또는 취소하고 싶어요.</div>
+          <i class="fa-solid fa-chevron-down icon--large"></i>
+        </div>
+        <div class="accdn__content body--kr-m">
+          예약 변경과 취소는 유선으로만 가능합니다.<br>
+          예약 변경 또는 취소를 원하시면 평일 09:00~18:00 중에 042-254-4555로 연락해주시기 바랍니다.
+        </div>
+      </div>
+      <div class="accdn">
+        <div class="accdn__title">
+          <div class="title--kr-xs">환불 규정이 어떻게 되나요?</div>
+          <i class="fa-solid fa-chevron-down icon--large"></i>
+        </div>
+        <div class="accdn__content body--kr-m">
+          2일 전 취소는 70% 환불, 1일 전 취소는 50% 환불, 당일 취소의 경우 환불액이 없습니다.
+        </div>
+      </div>
+      <div class="accdn">
+        <div class="accdn__title">
+          <div class="title--kr-xs">승차권은 어떻게 구입하나요?</div>
+          <i class="fa-solid fa-chevron-down icon--large"></i>
+        </div>
+        <div class="accdn__content body--kr-m">
+          오프라인의 경우 대전트래블라운지 내 키오스크 및 담당자를 통한 현금결제가 가능합니다.<br>
+          온라인의 경우 대전시티투어 홈페이지 내에서 카드 결제가 가능합니다.
+        </div>
+      </div>
+    </div>
+    <div class="floating-btn-wrap">
+      <button class="floating-btn faq-btn active" id="faqBtn">
+        <i class="fa-regular fa-circle-question icon--large"></i>
+        <span class="title--kr-s">자주 묻는 질문</span>
+      </button>
+      <button class="floating-btn" id="closeBtn">
+        <i class="fa-regular fa-circle-xmark icon--large"></i>
+        <span class="title--kr-s">닫기</span>
+      </button>
+    </div>
+  </div>
+
+
+
+  <!--===== 태블릿 & 모바일 햄버거 메뉴 include =====-->
+  <div class="ham-wrap" id="hamWrap"></div>
+
+
+
+  <!--========== 포트폴리오 소개 modal ========== -->
+  <div class="modal fade" id="portfolioModal" tabindex="-1" aria-labelledby="portfolioModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="portfolioModalLabel">대전시티투어 소개</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <ul class="portfolio-guide body--kr-s">
+            <li class="portfolio-guide__li">
+              <i class="fa-brands fa-chrome icon--xlarge"></i>
+              이 웹사이트는 Chrome 브라우저에 최적화되어 있습니다.
+            </li>
+            <li class="portfolio-guide__li">
+              <i class="fa-solid fa-desktop icon--xlarge"></i>
+              PC 버전 사이즈 : ~ 1440px 초과
+            </li>
+            <li class="portfolio-guide__li">
+              <i class="fa-solid fa-tablet-screen-button icon--xlarge"></i>
+              Tab 버전 사이즈 : 768px 초과 1440px 이하
+            </li>
+            <li class="portfolio-guide__li">
+              <i class="fa-solid fa-mobile-screen-button icon--xlarge"></i>
+              Mobile 버전 사이즈 : 768px 이하
+            </li>
+          </ul>
+          
+          <div class="portfolio-work">
+            <div class="work">
+              <div class="work__title title--kr-xs">작업기간</div>
+              <div class="work__info body--kr-m">2.5 Mon</div>
+            </div>
+            <div class="work">
+              <div class="work__title title--kr-xs">작업영역</div>
+              <div class="work__info body--kr-m">메인 페이지, 서브 페이지 3개(예약 신청, 이용 후기, 공지사항)</div>
+            </div>
+            <div class="work">
+              <div class="work__title title--kr-xs">역할</div>
+              <div class="work__info">
+                <div class="role--green">
+                  <span class="role__label">기획</span>
+                  <span class="percent">100%</span>
+                </div>
+                <div class="role--red">
+                  <span class="role__label">UI 설계</span>
+                  <span class="percent">100%</span>
+                </div>
+                <div class="role--blue">
+                  <span class="role__label">디자인</span>
+                  <span class="percent">100%</span>
+                </div>
+                <div class="role--yellow">
+                  <span class="role__label">개발</span>
+                  <span class="percent">100%</span>
+                </div>
+              </div>
+            </div>
+            <div class="work">
+              <div class="work__title title--kr-xs">사용 언어</div>
+              <div class="work__info body--kr-m">HTML, CSS, JavaScript, JQuery</div>
+            </div>
+            <div class="work align-items-start">
+              <div class="work__title title--kr-xs">리뉴얼 목적</div>
+              <div class="work__info body--kr-m">
+                여행이라는 주제를 동적 요소들로 재미있게 표현하고자 했습니다.<br>
+                컨텐츠의 정렬 시스템을 재정리하면서 여러 장소를 여행하는 느낌을 주고자 했습니다.<br>
+                새로운 컬러 시스템과 그리드 시스템, 다양한 동적 효과들로 정보들을 다채롭게 재구성했습니다.
+              </div>
+            </div>
+            <div class="work">
+              <div class="work__title title--kr-xs">서브 페이지 안내</div>
+              <div class="work__info body--kr-m">
+                해당 아이콘이 깜박이는 곳을 클릭하시면 서브 페이지로 이동하실 수 있습니다. <span class="click-cta"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-compare">
+            <div class="compare-wrap">
+              <div class="title--kr-m">
+                <i class="fa-solid fa-circle-exclamation icon--xlarge"></i>기존 웹페이지
+              </div>
+              <div class="compare__img">
+                <img src="img/main/modal/compare_before.png" alt="대전시티투어(기존)">
+              </div>
+            </div>
+            <div class="compare-wrap">
+              <div class="title--kr-m">
+                <i class="fa-solid fa-circle-check icon--xlarge"></i>리뉴얼 웹페이지
+              </div>
+              <div class="compare__img">
+                <img src="img/main/modal/compare_after.png" alt="대전시티투어(리뉴얼)">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="page-button">
+            <div class="page-button-center">
+              <button class="btn btn--green btn--large" data-bs-dismiss="modal"><span>닫기</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/main/script.js"></script>
+</body>
+</html>

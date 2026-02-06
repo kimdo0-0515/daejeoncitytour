@@ -1,0 +1,56 @@
+@media all and (max-width: 1440px){
+  /* ===== 요금 안내 영역 ===== */
+  
+
+
+
+
+
+  .section__content{
+    margin-top: 1.25rem;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  /* ===== 검색 필터 ===== */
+  .section__filter-wrap{
+    width: 100%;
+    height: fit-content;
+    padding: 1.25rem;
+    flex-direction: row;
+  }
+  .filter-item{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .section__filter-wrap .page-button{
+    width: fit-content;
+  }
+
+
+  /* ===== 아코디언 메뉴 ===== */
+  .reserve-accdn{
+    padding: 1.25rem;
+  }
+  .accdn__title{
+    gap: 1.25rem;
+  }
+  .reserve-accdn.active .accdn__content{
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+  }
+  .accdn__plan-wrap{
+    margin-bottom: 1.25rem;
+    gap: 0.75rem 1.25rem;
+  }
+  .plan{
+    min-width: calc((100% - 1.25rem) / 2);
+  }
+
+
+  /* ===== 캘린더 위치 보정 ===== */
+  .datepicker{
+    transform: translateY(calc(5rem + 4rem));
+  }
+}

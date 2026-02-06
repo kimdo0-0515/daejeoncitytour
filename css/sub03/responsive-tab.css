@@ -1,0 +1,22 @@
+@media all and (max-width: 1440px){
+  /* 리뷰 박스 */
+  .review{
+    padding: 1.25rem 0;
+    gap: 1.25rem;
+  }
+  .review__text-wrap, .review__img-wrap{
+    width: calc((100% - 1.25rem) / 2);
+  }
+  .review__text-wrap{
+    gap: 0.75rem;
+  }
+  .review__img-wrap{
+    gap: 1.25rem;
+  }
+  .review__img-wrap img{
+    width: calc((100% - 1.25rem) / 2);
+  }
+  .review__img-wrap img:last-child{
+    display: none;
+  }
+}

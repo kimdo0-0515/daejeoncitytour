@@ -1,0 +1,310 @@
+@media all and (max-width: 768px){
+  :where(#masilSec, #updateSec, #hotelSec, #busSec) h2{
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  /* ========== section: 메인 비주얼 ========== */
+  #mainVisualSec .slide-txt-wrap{
+    width: 90%;
+    margin: auto;
+  }
+  #mainVisualSec h1{
+    font-size: 2rem;
+  }
+  #mainVisualSec p{
+    font-size: 1rem;
+  }
+  #mainVisualSec :where(.swiper-button-next, .swiper-button-prev){
+    display: none;
+  }
+  #mainVisual .swiper-pagination{
+    bottom: 1.5rem;
+  }
+
+
+  /* ========== section: 자주 찾는 메뉴 ========== */
+  #favMenuSec{
+    margin-top: 2.5rem;
+  }
+  .fav-menu-wrap{
+    gap: 0.75rem;
+  }
+  .fav-menu{
+    flex: 1;
+    flex-basis: 33%;
+  }
+  .fav-menu a{
+    min-height: fit-content;
+    gap: 0.75rem;
+  }
+  .fav-menu p{
+    font-size: 1.125rem;
+  }
+
+
+
+  /* ========== section: 마실코스 ========== */
+  #masilSec .section__divide-right{
+    width: 66%;
+    margin: auto;
+  }
+  .masil-desc-wrap p:first-child{
+    font-size: 1.125rem;
+  }
+  .masil-desc__desc{
+    font-size: 1rem;
+    margin-top: 1.25rem;
+  }
+  #masilSec [class*="filter-set"]{
+    gap: 0.75rem;
+    padding: 2.5rem 5%;
+  }
+  #masilSec .section__divide-right{
+    width: 90%;
+  }
+  .masil-course{
+    gap: 1.25rem;
+  }
+  .masil{
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+  [class*="masil__img"]{
+    width: 3.75rem;
+  }
+  .masil__info div{
+    font-size: 1rem;
+  }
+  .masil__info p{
+    margin-top: 6px;
+  }
+  #masilSec .btn{
+    height: 3.5rem;
+  }
+  #masilSec .btn::after{
+    width: 3.75rem;
+    height: 3.5rem;
+    bottom: calc(100% - 6px);
+  }
+
+
+
+  /* ========== section: 특별코스 ========== */
+  #specialSec{
+    padding: 5rem 0;
+  }
+  .specialSec-title{
+    margin-bottom: 5rem;
+  }
+  .specialSec-title h1{
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  .specialSec-title div{
+    font-size: 1rem;
+  }
+  .special__title{
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 900;
+  }
+  .special__desc{
+    margin-bottom: 2.5rem;
+  }
+  .special__desc p{
+    font-size: 1rem;
+  }
+  .bakery-wrap{
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+  }
+  .bakery-wrap > *{
+    width: calc((100% - 0.75rem) / 2);
+    aspect-ratio: 1 / 1;
+  }
+  .bakery{
+    border-radius: var(--border-radius-20);
+  }
+  .bakery__nm{
+    padding: 6px;
+    font-size: 0.875rem;
+  }
+  .bakery--img img:first-child{
+    width: 6.25rem;
+    left: 1rem;
+    top: 10px;
+  }
+  .bakery--img img:last-child{
+    width: 4rem;
+    right: 1rem;
+    bottom: 10px;
+  }
+  .summer__slide{
+    aspect-ratio: 1 / 1.13;
+    margin: 2.5rem auto;
+  }
+  .special-autumn > *:not(#autumnSlide, .sing-img){
+    width: 90%;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #autumnSlide{
+    height: 14.8rem;
+    padding: 1rem 1.25rem;
+    margin-bottom: 5.625rem;
+  }
+  .film-effect-row{
+    height: 0.875rem;
+  }
+  #autumnSlide .swiper-wrapper{
+    height: 9.65rem;
+  }
+  #autumnSlide .swiper-slide{
+    width: 14.8rem;
+    margin-right: 1rem;
+  }
+  .sing-img{
+    width: 4rem;
+    bottom: 4.5rem;
+    left: 5%;
+  }
+  .section__special .btn{
+    height: 3.5rem;
+  }
+
+
+
+  /* ========== section: 새로운 소식 ========== */
+  #updateSec .section__divide{
+    gap: 5rem;
+  }
+  :where(.notice-sec, .popup-sec) .title-btn-wrap{
+    margin-bottom: 1rem;
+  }
+  :where(.notice-sec, .popup-sec) .title-btn-wrap [class*="title--"]{
+    font-size: 1.5rem;
+  }
+  .notice-wrap{
+    padding: 0.75rem;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .notice{
+    width: 100%;
+    gap: 0.75rem;
+  }
+  .notice img{
+    width: 3.75rem;
+  }
+  .notice__info{
+    max-width: calc(100% - 3.75rem - 0.75rem);
+  }
+  .notice__title-date{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .notice__info .title{
+    font-size: 1rem;
+  }
+  .notice__info .date{
+    font-size: 0.75rem;
+  }
+  .notice__info .preview{
+    display: none;
+  }
+  #popupZone{
+    aspect-ratio: 1.33 / 1;
+  }
+
+
+
+  /* ========== section: 제휴 호텔 ========== */
+  #hotelSwiper :is(.swiper-slide, .swiper-slide.slide--vertical){
+    width: 16rem !important;
+    height: 9.625rem !important;
+    margin-right: 0.75rem;
+  }
+  .hotel-hover [class*="title--"]{
+    font-size: 1rem;
+  }
+  .hotel-hover span{
+    font-size: 0.875rem;
+  }
+  #hotelSwiper .swiper-slide.active .hotel-hover{
+    padding: 1rem;
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+
+  /* ========== section: 시티투어 이용 안내 ========== */
+  #busSec .section__content{
+    gap: 1.5rem;
+  }
+  .bus-stop__mo{
+    width: 100%;
+    display: flex;
+  }
+  .bus-stop__mo .tab{
+    flex: 1;
+  }
+  .bus-stop-wrap{
+    display: none;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .map{
+    width: 100%;
+    height: unset;
+    aspect-ratio: 1 / 1;
+  }
+  .bus-stop__title{
+    display: none;
+  }
+  .bus-stop__tab{
+    display: none;  /* 수정 금지 */
+  }
+  .bus-stop__route{
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+    display: block;
+  }
+  .subway-route{
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--white-600);
+    margin-bottom: 1.25rem;
+    gap: 1.5rem;
+  }
+  .subway-row div:last-child, .bus-route__nm div, .bus-route__row p{
+    font-size: 1rem;
+  }
+  .bus-route{
+    gap: 1.875rem;
+  }
+  .bus-route{
+    display: flex;
+  }
+  [class*="bus-label--"]{
+    font-size: 0.875rem;
+  }
+  .bus-route__row i{
+    width: 1.25rem;
+    font-size: 1.25rem;
+  }
+  .bus-stop__mo:has(#busStopTab_lounge:checked) ~ #busStopWrap1,
+  .bus-stop__mo:has(#busStopTab_cityhall:checked) ~ #busStopWrap2{
+    display: flex;
+  }
+
+
+
+  /* ========== Floating Button & Accordion Toggle ========== */
+  .floating-wrap{
+    display: none;
+  }
+}

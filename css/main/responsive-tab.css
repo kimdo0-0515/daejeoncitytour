@@ -1,0 +1,312 @@
+@media all and (max-width: 1440px){
+  :where(#masilSec, #updateSec, #hotelSec, #busSec) h2{
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  /* ========== section: 메인 비주얼 ========== */
+  #mainVisualSec .slide-txt-wrap{
+    width: 58.2%;
+  }
+
+
+
+  /* ========== section: 자주 찾는 메뉴 ========== */
+  #favMenuSec{
+    margin-bottom: 0;
+  }
+  .fav-menu-wrap{
+    padding: 0;
+    background-color: unset;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+  .fav-menu{
+    flex: 1;
+    flex-basis: 25%;
+    height: fit-content;
+    background-color: var(--white-100);
+    border-radius: var(--border-radius-20);
+    box-shadow: var(--box-shadow-medium);
+    position: relative;
+  }
+  .fav-menu a{
+    height: 100%;
+    padding: 0.75rem;
+    gap: 1.25rem;
+  }
+
+
+
+  /* ========== section: 마실코스 ========== */
+  #masilSec{
+    margin-top: 2.5rem;
+    background: none;
+  }
+  #masilSec::before{
+    display: none;
+  }
+  #masilSec .section__inner{
+    display: block;
+    width: 100%;
+  }
+  #masilSec .section__divide-right{
+    width: 66%;
+    margin: auto;
+  }
+  .masil-desc-wrap{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .masil-desc__desc{
+    margin-top: 1.5rem;
+  }
+  #masilSec [class*="filter-set"]{
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 1.25rem;
+    padding: 3rem 5%;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  #masilSec label.filter{
+    flex: 0 0 auto;
+  }
+  .bus-img{
+    display: none;
+  }
+  .masil{
+    width: 100%;
+  }
+  .masil:nth-child(odd){
+    margin-right: 0;
+  }
+
+
+
+  /* ========== section: 특별코스 ========== */
+  #specialSec{
+    padding: 7.5rem 0;
+    background: var(--yellow-400);
+    display: block;
+    text-align: center;
+  }
+  .specialSec-title-wrap{
+    width: 90%;
+    height: fit-content;
+    margin: auto;
+  }
+  .specialSec-title{
+    width: 100%;
+    position: static;
+    margin: 0;
+    margin-bottom: 6.25rem;
+  }
+  .specialSec-title h1{
+    margin-bottom: 3rem;
+  }
+  .section__special{
+    max-width: unset;
+    width: 100%;
+    height: fit-content;
+    background-color: unset;
+    padding: 0;
+  }
+  .special-bread, .special-summer{
+    width: 90%;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .special-summer{
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+  }
+  .special__title{
+    margin-bottom: 2.25rem;
+    color: var(--black-400);
+  }
+  .special__title em{
+    color: var(--white-100);
+  }
+  .special__desc{
+    margin-bottom: 3.5rem;
+  }
+  .special__desc p:first-child{
+    margin-bottom: 0.75rem;
+  }
+  .section__special .btn{
+    background-color: var(--white-400);
+  }
+  .bakery-wrap{
+    gap: 1.25rem;
+    margin-bottom: 2.625rem;
+  }
+  .bakery-wrap > *{
+    width: calc((100% - 2*1.25rem) / 3);
+    aspect-ratio: 1 / 1;
+  }
+  .bakery{
+    border-radius: var(--border-radius-16);
+  }
+  .bakery__nm{
+    padding: 10px 0.75rem;
+    background-color: var(--white-400);
+  }
+  .bakery--img img:first-child{
+    width: 11.25rem;
+    left: 1.5rem;
+    top: 1.5rem;
+  }
+  .bakery--img img:last-child{
+    width: 6.25rem;
+    right: 2.25rem;
+    bottom: 2rem;
+  }
+  .summer__slide{
+    aspect-ratio: 1 / 1;
+    margin: 2.625rem auto;
+  }
+  .special-autumn > *:not(#autumnSlide, .sing-img){
+    width: 90%;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #autumnSlide{
+    margin-bottom: 11rem;
+  }
+  .sing-img{
+    width: 8.875rem;
+    bottom: 6rem;
+    left: 6rem;
+  }
+
+
+
+  /* ========== section: 새로운 소식 ========== */
+  #updateSec .section__divide{
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .notice-sec, .popup-sec{
+    max-width: 100%;
+  }
+  :where(.notice-sec, .popup-sec) .title-btn-wrap [class*="title--"]{
+    font-size: 2.25rem;
+  }
+  .notice-wrap, #popupZone{
+    height: fit-content;
+  }
+  .notice-wrap{
+    padding: 1.25rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+  .notice{
+    width: calc((100% - 1.25rem) / 2);
+  }
+  .notice__info{
+    max-width: calc(100% - 5rem - 1rem);
+  }
+  .notice__info :where(.title, .preview){
+    width: 100%;
+  }
+  #popupZone.none-swiper{
+    box-shadow: none;
+  }
+  #popupZone.none-swiper .swiper-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+  #popupZone.none-swiper .swiper-slide{
+    width: calc((100% - 1.25rem) / 2);
+    aspect-ratio: 1.67 / 1;
+    border-radius: var(--border-radius-12);
+    box-shadow: var(--box-shadow-medium);
+    overflow: hidden;
+  }
+  #popupZone.none-swiper :where(.swiper-button-next, .swiper-button-prev){
+    display: none;
+  }
+
+
+
+  /* ========== section: 제휴 호텔 ========== */
+  #hotelSwiper :is(.swiper-slide, .swiper-slide.slide--vertical){
+    width: 27rem !important;
+    height: 16rem !important;
+    margin-right: 1.25rem;
+  }
+  #hotelSwiper .swiper-slide.active .hotel-hover{
+    padding: 2rem;
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+
+  /* ========== section: 시티투어 이용 안내 ========== */
+  #busSec .section__content{
+    gap: 2rem;
+  }
+  .bus-stop-wrap{
+    height: fit-content;
+    gap: 1.25rem;
+  }
+  .map{
+    width: 50%;
+    height: auto;
+  }
+  .bus-stop__title{
+    margin-bottom: 0.75rem;
+  }
+  .bus-stop__tab{
+    width: 100%;
+    display: flex;
+  }
+  .bus-stop__tab .tab{
+    flex: 1;
+  }
+  .bus-stop__route{
+    margin: 1.25rem 0;
+    display: block;
+  }
+  .bus-route{
+    gap: 1.875rem;
+  }
+  .subway-route, .bus-route{
+    display: none;
+  }
+  .bus-stop__tab:has(#travelLoungeTab_subway:checked) + .bus-stop__route #travelLounge_subwayRoute,
+  .bus-stop__tab:has(#travelLoungeTab_bus:checked) + .bus-stop__route #travelLounge_busRoute,
+  .bus-stop__tab:has(#cityhallTab_subway:checked) + .bus-stop__route #cityhall_subwayRoute,
+  .bus-stop__tab:has(#cityhallTab_bus:checked) + .bus-stop__route #cityhall_busRoute{
+    display: flex;
+  }
+
+
+
+  /* ========== Scroll controller ========== */
+  .scroll-controller{
+    display: none;
+  }
+
+
+  /* ========== Floating Button & Accordion Toggle ========== */
+  .floating-wrap{
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
+  .floating-toggle{
+    margin-bottom: 1.25rem;
+  }
+}

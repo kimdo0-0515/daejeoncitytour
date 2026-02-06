@@ -1,0 +1,85 @@
+.content__top{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1.5rem;
+}
+.count{
+  font-size: 0.875rem;
+  font-weight: 800;
+  line-height: 140%;
+}
+#reviewCount{
+  color: var(--blue-500);
+}
+.content__top .page-button{
+  width: fit-content;
+}
+.content{
+  padding-top: 0.75rem;
+  border-top: 2px solid var(--green-500);
+}
+
+/* 리뷰 박스 */
+.review{
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--black-200);
+  display: flex;
+  gap: 1.5rem;
+}
+.review__text-wrap, .review__img-wrap{
+  width: calc((100% - 1.5rem) / 2);
+}
+.review__text-wrap{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.review__text-wrap > [class*="title--"]{
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.review__info{
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.review__write{
+  color: var(--black-200);
+}
+.writer{
+  padding-right: 0.75rem;
+}
+.date{
+  padding-left: 0.75rem;
+  border-left: 1px solid var(--black-200);
+}
+.review__rating{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.rating--red{ color: var(--red-300); }
+.rating--blue{ color: var(--blue-500); }
+.review__rating span{
+  font-size: 0.875rem;
+  font-weight: 800;
+  line-height: 140%;
+}
+.review__arrow-mo{
+  display: none;
+}
+.review__img-wrap{
+  display: flex;
+  gap: 1.5rem;
+}
+.review__img-wrap img{
+  width: calc((100% - 2*1.5rem) / 3);
+  aspect-ratio: 1.38 / 1;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--border-radius-16);
+  box-shadow: var(--box-shadow-medium);
+}

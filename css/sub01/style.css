@@ -1,0 +1,242 @@
+/* ===== 요금 안내 영역 ===== */
+.cost-guide-wrap{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+.cost-guide-wrap > p em{
+  font-weight: 800;
+  color: var(--red-400);
+}
+.cost-guide-wrap > p.mo{
+  display: none;
+}
+.cost-guide-wrap .page-button{
+  width: fit-content;
+}
+.cost-guide__toggle{
+  display: none;
+  flex-direction: column;
+  gap: 2.25rem;
+  padding: 1.5rem;
+  background-color: var(--white-100);
+  border: 3px solid var(--yellow-400);
+  border-radius: var(--border-radius-20);
+  box-shadow: var(--box-shadow-medium);
+  position: absolute;
+  top: 100%;
+  right: 0;
+}
+.cost-guide__toggle.is-open{
+  display: flex;
+  z-index: 9990;
+}
+:where(.not-include-ul, .discount__ul) li{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.not-include-ul li:nth-child(2){
+  margin: 6px 0;
+}
+.not-include-ul em{
+  font-weight: 800;
+  color: var(--red-400);
+}
+.discount-wrap{
+  display: flex;
+  gap: 1.5rem;
+}
+.discount > [class*="title--"]{
+  color: var(--green-500);
+  margin-bottom: 10px;
+}
+.discount__ul li + li{
+  margin-top: 6px;
+}
+.discount__ul i{
+  color: var(--green-500);
+}
+[class*="toggle__table-wrap"]{
+  position: relative;
+}
+.toggle__table-wrap-mo{
+  display: none;
+}
+.cost-guide__toggle .table thead{
+  font-size: 0.875rem;
+  font-weight: 800;
+  line-height: 140%;
+}
+.cost-guide__toggle .table thead th:where(:nth-child(4), :nth-child(5)){
+  font-size: 0.75rem;
+}
+[class*="toggle__table-wrap"] img{
+  width: 3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-75%);
+}
+
+
+
+.section__content{
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* ===== 검색 필터 ===== */
+.section__filter-wrap{
+  width: 19.5rem;
+  height: fit-content;
+  background-color: var(--white-100);
+  padding: 1.5rem;
+  border-radius: var(--border-radius-12);
+  box-shadow: var(--box-shadow-medium);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+
+/* ===== 아코디언 메뉴 ===== */
+.section__list{
+  flex: 1;
+}
+.reserve-accdn{
+  background-color: var(--white-100);
+  padding: 1.5rem;
+  border-radius: var(--border-radius-20);
+  box-shadow: var(--box-shadow-medium);
+  margin-bottom: 1.5rem;
+}
+.accdn__title{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  cursor: pointer;
+}
+.accdn__title img{
+  width: 7.5rem;
+  aspect-ratio: 1.5 / 1;
+  border-radius: var(--border-radius-12);
+}
+.accdn__product{
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-right: auto;
+}
+.product__label-wrap{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+[class*="product__label--"]{
+  padding: 4px 8px;
+  border-radius: 15px;
+  border-width: 1px;
+  border-style: solid;
+}
+.product__label--green{
+  border-color: var(--green-500);
+  color: var(--green-500);
+}
+.product__label--yellow{
+  border-color: var(--yellow-500);
+  color: var(--yellow-500);
+}
+.product__label--brown{
+  border-color: var(--brown-400);
+  color: var(--brown-400);
+}
+.product__title-wrap{
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.product__title-wrap p{
+  color: var(--black-100);
+}
+.accdn__title i{
+  transition-duration: 0.25s;
+}
+.reserve-accdn.active .accdn__title i{
+  transform: rotate(180deg);
+}
+.accdn__arrow-mo{
+  display: none;
+}
+.accdn__content{
+  max-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 1px solid transparent;
+  overflow: hidden;
+  transition-duration: 0.25s;
+}
+.reserve-accdn.active .accdn__content{
+  max-height: fit-content;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--white-600);
+}
+.accdn__plan-wrap{
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+}
+.plan{
+  flex: 1;
+  min-width: calc((100% - 1.5rem) / 2);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.plan span{
+  color: var(--blue-500);
+}
+
+
+
+/* ===== 투어 예약 모달창 ===== */
+#reserveModal .modal-body form{
+  margin: 1rem 0;
+}
+.form-item{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.form-item label{
+  width: 7rem;
+}
+.required-guide ul{
+  margin-top: 8px;
+  margin-bottom: 1rem;
+}
+.required-guide li{
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.required-guide ul + label[class*="checkbox"]{
+  width: 100%;
+  justify-content: center;
+}
+#reserveModal em{
+  font-weight: 800;
+  color: var(--red-400);
+}
+
+
+
+/* ===== 캘린더 위치 보정 ===== */
+.datepicker{
+  transform: translateY(calc(6rem + 4rem)); /* section의 margin-top만큼 아래로 이동 */
+}

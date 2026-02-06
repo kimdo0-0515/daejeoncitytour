@@ -1,0 +1,166 @@
+@media all and (max-width: 768px){
+  /* ===== 요금 안내 영역 ===== */
+  .cost-guide-wrap{
+    gap: 6px;
+  }
+  .cost-guide-wrap > p{
+    display: none;
+  }
+  .cost-guide-wrap > p.mo{
+    display: block;
+  }
+  .cost-guide__toggle{
+    max-width: 100%;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  :where(.not-include-ul, .discount__ul) li{
+    font-size: 0.75rem;
+  }
+  .discount-wrap{
+    flex-direction: column;
+  }
+  .discount > [class*="title--"]{
+    font-size: 0.875rem;
+  }
+  [class*="toggle__table-wrap"]{
+    display: none;
+  }
+  .toggle__table-wrap-mo{
+    display: block;
+  }
+  .toggle__table-wrap-mo .dropdown-toggle{
+    width: 14.4rem;
+  }
+  .toggle__table-wrap-mo .row-table{
+    font-size: 0.875rem;
+    text-align: center;
+  }
+  .toggle__table-wrap-mo .row-table tr:where(:nth-child(3), :nth-child(4)) th{
+    font-size: 0.75rem;
+  }
+  .toggle__table-wrap-mo img{
+    width: 2.625rem;
+    transform: translateY(0);
+  }
+
+
+
+  .section__content{
+    margin-top: 0.75rem;
+    gap: 2rem;
+  }
+
+  /* ===== 검색 필터 ===== */
+  .section__filter-wrap{
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .filter-item{
+    display: block;
+  }
+  .filter-item > [class*="title--"]{
+    font-size: 1rem;
+  }
+  .section__filter-wrap .page-button{
+    width: 100%;
+  }
+
+
+  /* ===== 아코디언 메뉴 ===== */
+  .reserve-accdn{
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  .accdn__title{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .accdn__title img{
+    width: 100%;
+    aspect-ratio: 2 / 1;
+  }
+  .accdn__product{
+    width: 100%;
+    gap: 6px;
+    margin: 0;
+  }
+  [class*="product__label--"]{
+    padding: 4px 6px;
+    font-size: 0.75rem;
+    line-height: 130%;
+  }
+  .product__title-wrap{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .product__title-wrap div{
+    font-size: 1.125rem;
+  }
+  .product__title-wrap p{
+    font-size: 0.75rem;
+  }
+  .reserve-accdn.active .accdn__title i{
+    transform: rotate(180deg);
+  }
+  .accdn__product + i{
+    display: none;
+  }
+  .accdn__arrow-mo{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--blue-500);
+    margin-left: auto;
+  }
+  .accdn__arrow-mo span{
+    font-size: 0.875rem;
+    font-weight: 800;
+    line-height: 140%;
+  }
+  .reserve-accdn.active .accdn__content{
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+  .accdn__plan-wrap{
+    margin-bottom: 1rem;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .plan{
+    flex: 1;
+    min-width: unset;
+  }
+  .plan :where(span, p){
+    font-size: 0.75rem;
+  }
+
+
+
+  /* ===== 투어 예약 모달창 ===== */
+  .form-item{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    margin-bottom: 0.75rem;
+  }
+  .form-item label{
+    width: 100%;
+    font-size: 0.875rem;
+  }
+  .required-guide > div:first-child{
+    font-size: 0.875rem;
+  }
+  .required-guide > ul{
+    font-size: 0.75rem;
+  }
+
+
+  /* ===== 캘린더 위치 보정 ===== */
+  .datepicker{
+    transform: translateY(calc(3.75rem + 2.25rem));
+  }
+}

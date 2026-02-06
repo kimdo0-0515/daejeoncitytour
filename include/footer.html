@@ -1,0 +1,143 @@
+<div class="logo-slide-wrap">
+  <div class="swiper" id="verticalSlide">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="../img/logo/logo_slide_01.png" alt="효월드">
+        <img src="../img/logo/logo_slide_02.jpg" alt="대전관광공사">
+        <img src="../img/logo/logo_slide_03.png" alt="성심당">
+        <img src="../img/logo/logo_slide_04.png" alt="국립대전숲체원">
+        <img src="../img/logo/logo_slide_05.png" alt="장태산자연휴양림">
+      </div>
+      <div class="swiper-slide">
+        <img src="../img/logo/logo_slide_06.png" alt="국립대전현충원">
+        <img src="../img/logo/logo_slide_07.png" alt="테미오래">
+        <img src="../img/logo/logo_slide_08.png" alt="호텔ICC">
+        <img src="../img/logo/logo_slide_09.jpg" alt="호텔스카이파크">
+        <img src="../img/logo/logo_slide_10.jpg" alt="롯데시티호텔">
+      </div>
+    </div>
+    <div class="swiper-button-next">
+      <i class="fa-solid fa-chevron-down icon--large"></i>
+    </div>
+    <div class="swiper-button-prev">
+      <i class="fa-solid fa-chevron-up icon--large"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="footer__inner">
+  <nav class="footer-nav">
+    <ul class="fnb title--kr-xs">
+      <li class="fnb__li"><a href="#none">대전시티투어 소개</a></li>
+      <li class="fnb__li"><a href="#none">이용안내</a></li>
+      <li class="fnb__li"><a href="#none">추천 명소</a></li>
+      <li class="fnb__li"><a href="#none">외국어안내</a></li>
+      <li class="fnb__li"><a href="#none">개인정보처리방침</a></li>
+      <li class="fnb__li"><a href="#none">이용약관</a></li>
+    </ul>
+  </nav>
+
+  <div class="footer__content">
+    <div class="footer__cs">
+      <div class="content__title">
+        <i class="fa-solid fa-headset icon--xlarge"></i>
+        <div class="title--kr-s">1:1 고객상담</div>
+      </div>
+      <div class="content__info">
+        <div class="info">
+          <div class="info__title title--kr-xs">운영시간</div>
+          <div class="info__desc body--kr-m">월~금 09:00 ~ 18:00</div>
+        </div>
+        <div class="info">
+          <div class="info__title title--kr-xs">전화번호</div>
+          <div class="info__desc body--kr-m">042-254-4555</div>
+        </div>
+      </div>
+      <p class="cs-txt body--kr-s">
+        ※ 근무 시간 외 문의사항은 홈페이지의 문의게시판을 이용해주십시오.
+      </p>
+    </div>
+
+    <div class="footer__company">
+      <div class="content__title">
+        <i class="fa-regular fa-building icon--xlarge"></i>
+        <div class="title--kr-s">기업 정보</div>
+      </div>
+      <div class="content__info">
+        <div class="info">
+          <div class="info__title title--kr-xs">상호</div>
+          <div class="info__desc body--kr-m">(주)리빙인터내셔널</div>
+        </div>
+        <div class="info">
+          <div class="info__title title--kr-xs">대표자</div>
+          <div class="info__desc body--kr-m">김욱태</div>
+        </div>
+        <div class="info">
+          <div class="info__title title--kr-xs">주소</div>
+          <div class="info__desc body--kr-m">대전광역시 중구 목척8길11(정우빌딩 201호)</div>
+        </div>
+        <div class="info">
+          <div class="info__title title--kr-xs">사업자번호</div>
+          <div class="info__desc body--kr-m">314-86-45370 (일반여행업)</div>
+        </div>
+        <div class="info">
+          <div class="info__title title--kr-xs">통신판매업신고</div>
+          <div class="info__desc body--kr-m">제2020-대전서구-0253호</div>
+        </div>
+        <div class="info">
+          <div class="info__title title--kr-xs">대표전화</div>
+          <div class="info__desc body--kr-m">042-254-4555</div>
+        </div>
+        <div class="info">
+          <div class="info__title title--kr-xs">팩스</div>
+          <div class="info__desc body--kr-m">042-720-9252</div>
+        </div>
+        <div class="info">
+          <div class="info__title title--kr-xs">이메일</div>
+          <div class="info__desc body--kr-m">lvtour@naver.com</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <p class="copyright body--kr-s">
+    © 2025 <em>DAEJEON CITY TOUR</em>. All rights reserved.
+  </p>
+</div> <!-- footer__inner -->
+
+<script>
+  // 즉시 실행 함수
+  (function(){
+    let footerSwiper = null;
+
+    // footerSwiper 초기화
+    function initFooterSwiper(){
+      if(footerSwiper) return;
+
+      footerSwiper = new Swiper("#verticalSlide", {
+        direction: "vertical",
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        loop: true,
+      });
+    }
+
+    // footerSwiper 해제
+    function destroyFooterSwiper(){
+      if (!footerSwiper) return;
+
+      footerSwiper.destroy(true, true);
+      footerSwiper = null;
+    }
+
+    // body js에서 접근할 수 있도록 API만 전역으로 노출
+    window.footerSwiperAPI = {
+      init: initFooterSwiper,
+      destroy: destroyFooterSwiper,
+    };
+  })();
+</script>

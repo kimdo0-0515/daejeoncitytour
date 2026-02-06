@@ -1,0 +1,112 @@
+<div class="ham-layer"></div>
+<div class="ham-section">
+  <div class="ham-top">
+    <div class="lang-wrap">
+      <button class="lang-btn" id="ham_koBtn" value="ko"></button>
+      <button class="lang-btn" id="ham_enBtn" value="en"></button>
+    </div>
+    <button class="ham-close-btn" id="hamCloseBtn">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </div>
+  <div class="ham-menu-wrap">
+    <div class="ham-menu">
+      <div class="ham-menu__title">
+        <div class="title--kr-l">소개</div>
+        <i class="fa-solid fa-chevron-down icon--xlarge"></i>
+      </div>
+      <ul class="ham-menu__ul">
+        <li class="ham-menu__li title--kr-m"><a href="#none">대전시티투어 소개</a></li>
+        <li class="ham-menu__li title--kr-m"><a href="#none">이용 안내</a></li>
+        <li class="ham-menu__li title--kr-m"><a href="#none">운영사 소개</a></li>
+      </ul>
+    </div>
+    <div class="ham-menu">
+      <div class="ham-menu__title">
+        <div class="title--kr-l">코스 안내</div>
+        <i class="fa-solid fa-chevron-down icon--xlarge"></i>
+      </div>
+      <ul class="ham-menu__ul">
+        <li class="ham-menu__li title--kr-m"><a href="#none">마실코스</a></li>
+        <li class="ham-menu__li title--kr-m"><a href="#none">특별 코스</a></li>
+        <li class="ham-menu__li title--kr-m"><a href="#none">맞춤 코스</a></li>
+      </ul>
+    </div>
+    <div class="ham-menu">
+      <div class="ham-menu__title">
+        <div class="title--kr-l">예약</div>
+        <i class="fa-solid fa-chevron-down icon--xlarge"></i>
+      </div>
+      <ul class="ham-menu__ul">
+        <li class="ham-menu__li title--kr-m"><a href="#none">예약 신청</a></li>
+        <li class="ham-menu__li title--kr-m"><a href="#none">예약 확인</a></li>
+      </ul>
+    </div>
+    <div class="ham-menu">
+      <div class="ham-menu__title">
+        <div class="title--kr-l">커뮤니티</div>
+        <i class="fa-solid fa-chevron-down icon--xlarge"></i>
+      </div>
+      <ul class="ham-menu__ul">
+        <li class="ham-menu__li title--kr-m"><a href="#none">공지사항</a></li>
+        <li class="ham-menu__li title--kr-m"><a href="#none">문의게시판</a></li>
+        <li class="ham-menu__li title--kr-m"><a href="#none">이용 후기</a></li>
+      </ul>
+    </div>
+    <div class="ham-menu">
+      <div class="ham-menu__title">
+        <div class="title--kr-l">대전관광안내</div>
+        <i class="fa-solid fa-chevron-down icon--xlarge"></i>
+      </div>
+      <ul class="ham-menu__ul">
+        <li class="ham-menu__li title--kr-m"><a href="#none">추천 명소</a></li>
+        <li class="ham-menu__li title--kr-m"><a href="#none">제휴 호텔</a></li>
+        <li class="ham-menu__li title--kr-m"><a href="#none">외국어 안내</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+const $hamBtn = document.getElementById('hamBtn');
+const $hamCloseBtn = document.getElementById('hamCloseBtn');
+const $hamWrap = document.getElementById('hamWrap');
+const $hamLayer = document.querySelector('.ham-layer');
+
+const $hamMenues = $hamWrap.querySelectorAll('.ham-menu');
+const $hamAccdnTitles = $hamWrap.querySelectorAll('.ham-menu__title');
+
+$hamBtn.addEventListener('click', hamBtnClick);
+$hamCloseBtn.addEventListener('click', hamCloseBtnAndLayerClick);
+$hamLayer.addEventListener('click', hamCloseBtnAndLayerClick);
+
+$hamAccdnTitles.forEach(accdn => {
+  accdn.addEventListener('click', hamAccdnClick);
+});
+
+
+
+function hamBtnClick(){
+  $hamWrap.style.display = 'block';
+  document.body.style.overflowY = 'hidden';
+}
+
+function hamCloseBtnAndLayerClick(){
+  $hamWrap.style.display = 'none';
+  document.body.style.overflowY = 'auto';
+}
+
+function hamAccdnClick(){
+  let $parentHamMenu = this.closest('.ham-menu');
+    
+  if($parentHamMenu.classList.contains('active')){
+    $parentHamMenu.classList.remove('active');
+  }
+  else{
+    $hamMenues.forEach(i => i.classList.remove('active'));
+    $parentHamMenu.classList.add('active');
+  } 
+}
+</script>
